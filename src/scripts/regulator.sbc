@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>Regulator</SubtypeId> <!-- Unique block subtypeId -->
+      </Id>
+      <DisplayName>Regulator</DisplayName> <!-- Name visible in game -->
+      <Icon>Textures\GUI\Icons\Regulator.dds</Icon> <!-- Lets use window icon for our sphere -->
+      <CubeSize>Small</CubeSize> <!-- We're making small block -->
+      <BlockTopology>TriangleMesh</BlockTopology> <!-- Use TriangleMesh (unless you want to make new deformable armor) -->
+      <Size x="1" y="1" z="1" /> <!-- Size in blocks is 1x1x1 (just one block) -->
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Small\regulator.mwm</Model> <!-- Model path -->
+      <Components>
+        <Component Subtype="InteriorPlate" Count="12" />
+        <Component Subtype="Construction" Count="8" />
+        <Component Subtype="SmallTube" Count="4" />
+      </Components>
+      <CriticalComponent Subtype="Construction" Index="0" />
+      <BlockPairName>SphereBlockPairName</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>10</BuildTimeSeconds>
+      <DamageEffectId>214</DamageEffectId>
+    </Definition>
+  </CubeBlocks>
+  <BlockPositions>
+     <BlockPosition>
+        <Name>testcubePairName</Name>
+        <Position>
+          <X>-3</X>
+          <Y>-3</Y>
+        </Position>
+     </BlockPosition>
+  </BlockPositions>
+</Definitions>
